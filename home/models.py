@@ -8,4 +8,11 @@ class WhyEduVueText(models.Model):
 
     def __str__(self):
         return self.head_text
+
+class CarouselText(models.Model):
+    head_text=models.CharField(max_length=300)  
+    display = models.BooleanField()  
+
+    def __str__(self):
+        return self.head_text
     
