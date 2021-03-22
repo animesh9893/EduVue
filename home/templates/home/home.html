@@ -2,8 +2,73 @@
 {% include 'carousel.html' %}
 {% block content %}
 <br><br>
-  <div class="container" >
-    <p style="text-align: center;">3 Easy Steps for stwiching Online.......</p>
+
+<div class="container" >
+  <h2 style="text-align: center;">3 Easy Steps for Offline to Online.......</h2>
+</div>
+<br><br>
+
+<!-- card for these 3 steps -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 d-flex align-items-stretch">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Sign Up</h5>
+          <!-- <h6 class="card-subtitle mb-2 text-muted"></h6> -->
+          <p class="card-text">Then we both communicate for next process.</p><br>
+          <a href="#" class="card-link">Sign Up</a>
+          <a href="#" class="card-link">Log In</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 d-flex align-items-stretch">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">We Build your website</h5>
+          <!-- <h6 class="card-subtitle mb-2 text-muted">We Build your website</h6> -->
+          <p class="card-text">For Student attraction we specifically build your website with all features.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 d-flex align-items-stretch">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Use your plateform</h5>
+          <!-- <h6 class="card-subtitle mb-2 text-muted">Use your plateform</h6> -->
+          <p class="card-text">After building website we will give you all access to site and we always behind you for support </p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
+<!-- why EduVue -->
+<br><br>
+
+<div class="container" >
+  <div class="row">
+    <div class="col">
+  <div class="card text-center">
+  <div class="card-header">
+    Why EduVue ?
+  </div>
+  <div class="card-body">
+    {% for l in why_eduvue_text %}
+    <abbr title="{{l.1}}" style="text-decoration: none;"><h5 class="card-title" style="display: inline;">{{l.0}}</h5><pre style="display: inline;">    </pre></abbr>
+    {% endfor %}
+  </div>
+  
+</div>
+</div>
+</div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br>
 {% endblock content %}
 
