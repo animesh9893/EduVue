@@ -1,5 +1,63 @@
 {% extends 'base.html' %}
 {% block content %}
-sgnalgnae;gaef;noefno
+
+<br><br>
+<div class="container" >
+  <div class="row">
+  <div class="col-lg-4 d-flex align-items-stretch">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">{{user_name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{institution_name}}</h6>
+    <p class="card-text">Your plan is active</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 d-flex align-items-stretch">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Number of Teacher</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{number_of_staff}}</h6><br>
+    </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<br><br>
+<form action="{{url}}" method="POST">
+	{% csrf_token %}
+<div class="container " style="margin-left: auto;margin-left: auto;display: block;" >
+	<div class="row">
+    	<div class="col-lg-4 d-flex align-items-stretch">
+			<div class="card " style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title">Add Teacher</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Teacher Name</h6>
+					<input type="text" name="name"><p></p>
+					<h6 class="card-subtitle mb-2 text-muted">Subject</h6>
+					<input type="text" name="subject"><p></p>
+					<h6 class="card-subtitle mb-2 text-muted">Password</h6>
+					<input type="password" name="password">
+					<p></p>
+					<h6 class="card-subtitle mb-2 text-muted">salary</h6>
+					<input type="password" name="salary">
+					<p></p>
+					<button type="summit" class="btn btn-primary">Add</button>
+					{% comment %} <p class="card-text">{{message}}</p> {% endcomment %}
+					<!-- <a href="#" class="card-link">Card link</a> -->
+					<!-- <a href="#" class="card-link">Another link</a> -->
+				</div>
+			</div>
+    	</div>
+    </div>
+</div>
+</form>
+{% if add_staff and not delete_staff %}
+<h1>add staff</h1>
+{% elif not add_staff and delete_staff%}
+<h1>delete staff</h1>
+{% endif%}
 
 {% endblock content %}
