@@ -12,6 +12,7 @@ def staff_management(request,username):
 	print(username)
 	context['url']="/staff_management/"+username+"/"
 	context['number_of_staff']=len(s)
+	context['staff_obj']=s
 	u=User.objects.get(user_name=username)
 	context['user_name']=u
 	print(context['user_name'])

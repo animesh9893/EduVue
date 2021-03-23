@@ -51,9 +51,22 @@
 				</div>
 			</div>
     	</div>
+    	<div class="col-lg-4 d-flex align-items-stretch">
+			<div class="card " style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title">Teacher</h5>
+                    {% for teacher in staff_obj %}
+					<h6 class="card-subtitle mb-2 text-muted">{{teacher.name}}</h6>
+                    <p>Subject : {{teacher.subject}} salary : {{teacher.salary}}</p>
+                    {% endfor %}
+				</div>
+			</div>
+    	</div>
     </div>
 </div>
 </form>
+
+
 {% if add_staff and not delete_staff %}
 <h1>add staff</h1>
 {% elif not add_staff and delete_staff%}
