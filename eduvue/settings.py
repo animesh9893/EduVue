@@ -27,7 +27,7 @@ SECRET_KEY = 'r+w_uj_+vfzw3=vuq&i6geaqg-a#9-)2mlvq*beau-nl11i+q&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://animeshinternship.herokuapp.com/']
+ALLOWED_HOSTS = ['https://animeshinternship.herokuapp.com/','https://secret-mountain-31498.herokuapp.com/']
 
 
 # Application definition
