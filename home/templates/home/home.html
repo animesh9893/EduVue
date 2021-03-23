@@ -24,8 +24,8 @@
           <h5 class="card-title">Sign Up</h5>
           <!-- <h6 class="card-subtitle mb-2 text-muted"></h6> -->
           <p class="card-text">Then we both communicate for next process.</p><br>
-          <a href="#" class="card-link">Sign Up</a>
-          <a href="#" class="card-link">Log In</a>
+          <a href="{% url 'sign_up' %}" class="card-link">Sign Up</a>
+          <a href="{% url 'login' %}" class="card-link">Log In</a>
         </div>
       </div>
     </div>
@@ -131,8 +131,15 @@ of businesses.
 
 <br><br><br><br>
 <div class="container">
-  <button type="button" class="btn btn-primary btn-lg btn-block">Log In</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Sign Up</button>
+  <a href="{% url 'login' %}"><button type="button" class="btn btn-primary btn-lg btn-block">Log In</button></a>
+  <br>
+  <a href="{% url 'sign_up' %}"><button type="button" class="btn btn-secondary btn-lg btn-block">Sign Up</button></a>
+  <br>
+  <a href="#"><button type="button" class="btn btn-secondary btn-lg btn-block">About Us</button></a>
+  <br>
+  <a href="#"><button type="button" class="btn btn-secondary btn-lg btn-block">Contact Us</button></a>
+  <br>
+  <a href="#"><button type="button" class="btn btn-secondary btn-lg btn-block">Pricing</button></a>
 </div>
 
 

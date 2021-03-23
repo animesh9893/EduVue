@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # new
     'home',
     'sign_up',
+    'login',
 ]
 
 MIDDLEWARE = [

@@ -18,6 +18,7 @@ def home(request):
     carousel_text=map(get_carousel_model_data,CarouselText.objects.filter(display=True))
     # print(carousel_text)
     home_context={
+        'status':False,
     	'carousel_text':carousel_text,
     	'why_eduvue_text':wevt,
     }
@@ -25,8 +26,8 @@ def home(request):
 
 def user_home(request,pk):
     user_obj = User.objects.get(id=pk)
-    print(user_obj)
-    return render(request,'home/home.html')
+    context={'user_name':user_obj.user_name,'status':True,}
+    return render(request,'home/home_user.html',context)
 
 
 
