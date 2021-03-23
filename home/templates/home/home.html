@@ -1,6 +1,12 @@
 {% include 'base.html' %}
 {% include 'carousel.html' %}
 {% block content %}
+<style type="text/css">
+  .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+</style>
 <br><br>
 
 <div class="container" >
@@ -68,18 +74,20 @@
 </div>
 </div>
 </div>
+<br><br>
 
 <div class="container" >
   <h2 style="text-align: center;">Our Team</h2>
 </div>
 <br><br>
 
-<!-- card for these 3 steps -->
+<!-- Our team card-->
 
 <div class="container">
   <div class="row">
     <div class="col-lg-4 d-flex align-items-stretch">
       <div class="card" style="width: 18rem;">
+        <h5 class="card-title" style="text-align: center;">Manik Kashyap</h5>
         <img src="https://parakh.online/img/About/manik%20kashyap.webp">
         <div class="card-body">
           <p class="card-text">Self-made Entrepreneur with over 10 years of experience in managing online/offline examinations. Life-long Learner, Talented Liasioner</p>
@@ -88,6 +96,7 @@
     </div>
     <div class="col-lg-4 d-flex align-items-stretch">
       <div class="card" style="width: 18rem;">
+        <h5 class="card-title" style="text-align: center;">Indu Kashyap</h5>
         <img src="https://parakh.online/img/About/indu%20kashyap.webp" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">Successful Businesswoman, who
@@ -101,6 +110,7 @@ department </p>
     </div>
     <div class="col-lg-4 d-flex align-items-stretch">
       <div class="card" style="width: 18rem;">
+        <h5 class="card-title" style="text-align: center;">Ankit Bansal</h5>
         <img src="https://parakh.online/img/About/ankit%20bansal%20.webp" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">IIT -IIM Graduate with 13
@@ -119,6 +129,13 @@ of businesses.
 
 
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
+<div class="container">
+  <button type="button" class="btn btn-primary btn-lg btn-block">Log In</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Sign Up</button>
+</div>
+
+
+<br><br><br><br><br><br>
 {% endblock content %}
 
