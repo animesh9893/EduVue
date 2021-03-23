@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="{% url 'sign_up' %}" method="POST">
+	{% csrf_token %}
+<div class="container " style="margin-left: auto;margin-left: auto;display: block;" >
+	<div class="row">
+    	<div class="col-lg-4 d-flex align-items-stretch">
+			<div class="card " style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title">Sign Up</h5>
+					<h6 class="card-subtitle mb-2 text-muted">User Name</h6>
+					<input type="text" name="username"><p></p>
+					<h6 class="card-subtitle mb-2 text-muted">Password</h6>
+					<input type="password" name="password">
+					<p></p>
+					<h6 class="card-subtitle mb-2 text-muted">Confirm Password</h6>
+					<input type="password" name="confirmpassword">
+					<p></p>
+					<button type="summit" class="btn btn-primary">Sign Up</button>
+					<p class="card-text">{{message}}</p>
+					<!-- <a href="#" class="card-link">Card link</a> -->
+					<!-- <a href="#" class="card-link">Another link</a> -->
+				</div>
+			</div>
+    	</div>
+    </div>
+</div>
+</form>
+{% endblock content %}

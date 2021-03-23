@@ -1,5 +1,7 @@
 from django.shortcuts import render , redirect
 from .models import WhyEduVueText , CarouselText
+from sign_up.models import User
+
 
 def get_wevt_model_data(obj):
     l=[]
@@ -20,6 +22,11 @@ def home(request):
     	'why_eduvue_text':wevt,
     }
     return render(request,'home/home.html',home_context)
+
+def user_home(request,pk):
+    user_obj = User.objects.get(id=pk)
+    print(user_obj)
+    return render(request,'home/home.html')
 
 
 
