@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% include 'carousel.html' %}
+{% block content %}
+<style type="text/css">
+  .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+</style>
+<br><br>
+{% if not plan_active %}
+<div class="container" >
+  <h2 style="text-align: center;">Pricing</h2>
+</div>
+<br><br>
+
+<!-- Pricing card-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 d-flex align-items-stretch">
+      <div class="card" style="width: 18rem;">
+        <h5 class="card-title" style="text-align: center;">$99/mo only</h5>
+        <div class="card-body">
+          <p class="card-text">
+            <ul>
+              <li>Free Website</li>
+              <li>Online Classes Plateform</li>
+              <li>Staff Management</li>
+              <li>Student Management</li>
+              <li>Biometric attendance</li>
+              .... many more
+            </ul>
+            there are more than 100 function we provide..
+          </p>
+          <form action="{% url 'payment' %}" action="post">
+            {% csrf_token %}
+          <button type="submit" class="btn btn-secondary btn-lg btn-block">Join</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% else %}
+
+<h2>You already a member..</h2>
+{% endif %}
+
+<br><br><br>
+
+
+<br><br><br><br><br><br>
+{% endblock content %}

@@ -15,4 +15,3 @@ class CarouselText(models.Model):
 
     def __str__(self):
         return self.head_text
-    

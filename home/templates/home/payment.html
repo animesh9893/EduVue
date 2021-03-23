@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if status %}
+<form action="{% url 'payment' %}" method="POST">
+	{% csrf_token %}
+<div class="container " style="margin-left: auto;margin-left: auto;display: block;" >
+	<div class="row">
+    	<div class="col-lg-4 d-flex align-items-stretch">
+			<div class="card " style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title">Pay</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Card number</h6>
+					<input type="text" name="card_number"><p></p>
+					<h6 class="card-subtitle mb-2 text-muted">CVV</h6>
+					<input type="password" name="cvv">
+					<p></p>
+					<h6 class="card-subtitle mb-2 text-muted">Expiry Date</h6>
+					<input type="date" name="date">
+					<p></p>
+					<button type="summit" class="btn btn-primary">Pay</button>
+					<p class="card-text"></p>
+					<!-- <a href="#" class="card-link">Card link</a> -->
+					<!-- <a href="#" class="card-link">Another link</a> -->
+				</div>
+			</div>
+    	</div>
+    </div>
+</div>
+</form>
+{% else %}
+<h2>You are not Sign up Or not logged in</h2>
+<a href="{% url 'login' %}"><button type="button" class="btn btn-primary btn-lg btn-block">Log In</button></a>
+  <br>
+ <a href="{% url 'sign_up' %}"><button type="button" class="btn btn-secondary btn-lg btn-block">Sign Up</button></a>
+  <br>
+{% endif %}
+{% endblock content %}
