@@ -62,3 +62,13 @@ def payment(request):
         return redirect(context['user'])
     return render(request,'home/payment.html',context)
 
+def staffredirect(request):
+    global context
+    if context['user']!=None:
+        user_name= context['user'].user_name
+        url = "/staff_management/"+user_name
+        print(url)
+        return redirect(url)
+    else:
+        return render(request,'home/home_user.html',context)
+        
