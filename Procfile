@@ -1,1 +1,1 @@
-web: gunicorn eduvue.wsgi
+web: gunicorn eduvue.wsgi --log-file -
