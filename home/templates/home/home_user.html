@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{% if not plan_active %}
+{% if not user.plan_active %}
   <style type="text/css">
     .card {
         margin: 0 auto; /* Added */
@@ -19,6 +19,28 @@
         </div>
   </div>
 {% endif %}
-
+<br><br>
+<div class="container" >
+  <div class="row">
+  <div class="col-lg-4 d-flex align-items-stretch">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">{{user.user_name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{user.institution_name}}</h6>
+    <p class="card-text">Your plan is active</p>
+    </div>
+    </div>
+  </div>
+  <div class="col-lg-4 d-flex align-items-stretch">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title" style="text-align: center;">Manage</h5>
+    <a href="#"></a><button type="button" class="btn btn-primary btn-lg btn-block">Teacher</button><p></p>
+    <a href="#"></a><button type="button" class="btn btn-primary btn-lg btn-block">Student</button>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 
 {% endblock content %}

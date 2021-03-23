@@ -34,7 +34,7 @@ def user_home(request,pk):
     context['user_name']=user_obj.user_name
     context['user']=user_obj
     context['status']=True
-    print(context['plan_active'])
+    # print(context['plan_active'])
     return render(request,'home/home_user.html',context)
 
 def about_us(request):
@@ -55,7 +55,7 @@ def payment(request):
         card_number = request.POST.get('card_number')
         date = request.POST.get('date')
         cvv = request.POST.get('cvv')
-        print(card_number,cvv,date)
+        # print(card_number,cvv,date)
         context['plan_active']=True
         context['user'].plan_true()
         context['user'].save()

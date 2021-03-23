@@ -9,7 +9,7 @@ def login(request):
     if request.POST:
         user_name= request.POST.get('username')
         password=request.POST.get('password')
-        print(user_name,password)
+        # print(user_name,password)
         if len(list(User.objects.filter(user_name=user_name,password=password)))==0:
             context['message']="Please use correct info"
             return render(request,'login/login.html',context)
